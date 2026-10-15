@@ -1,26 +1,614 @@
-<!-- Bem esse é o ínicio do meu projeto do meu Portfólio
-        Sem curso, sem videos, sem nenhum material ou inteligência
-            Artificial, apenas lendo a documentação do HTML, Css e Js.
-            -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elder Luiz Moreira · Desenvolvedor Fullstack</title>
+  <meta name="description" content="Portfólio de Elder Luiz Moreira, desenvolvedor fullstack com Java, Spring Boot, React e AWS. Sites em produção, APIs REST e microsserviços.">
+  <meta name="author" content="Elder Luiz Moreira">
+  <meta name="theme-color" content="#08090c">
+  <link rel="canonical" href="https://develder.tech/">
 
-        <h1>Meu Nome é  Elder Luiz,Sou desenvolvedor java Backend</h1>
-        <p>Até o presente momento sempre estudei e fui desenvolvedor
-            Java Backend, mas com intuito de ter um portfólio e assim 
-            divulgar o profissional que eu sou e como posso entregar 
-            agregar valor, resolvir construir meu portfólio para isso,
-            sem nenhuma experiência em front, irei contruir esse portfólio
-            sem Sem curso, sem videos, sem nenhum material ou inteligência
-            Artificial, apenas lendo a documentação do HTML, Css e Js.
-            <br>
-            Com essa experiência consigo até agregar valor em uma oportunidade
-            fullstack, estarei também lendo a documentação e estudando frames como
-            Angular. É isso.
-            <br>
-            Meu Objetivo é usar todo metodo de aprendizagem que a <strong> 42 São Paulo </strong> Aplica
-            aos seus estudantes, aprender totalmente de forma autonoma, isso requer muito
-            estudo, dedicação e consistência... Essencial para uma empresa.
-        </p>
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:url" content="https://develder.tech/">
+  <meta property="og:title" content="Elder Luiz Moreira · Desenvolvedor Fullstack">
+  <meta property="og:description" content="Java, Spring Boot, React e AWS. Do banco de dados ao pixel: sites em produção, APIs REST e microsserviços.">
+  <meta property="og:image" content="https://develder.tech/assets/img/elder.jpg">
+  <meta name="twitter:card" content="summary_large_image">
 
-    
-        <a href="https://www.linkedin.com/in/elder-luiz/">Meu Linkedln</a>
-        <a href=""
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#inicio" class="logo" aria-label="Início">
+        <span class="logo__bracket">&lt;</span>elder<span class="logo__accent">.dev</span><span class="logo__bracket">/&gt;</span>
+      </a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#stack">Stack</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#formacao">Formação</a>
+        <a href="#contato" class="nav__cta">Contato</a>
+      </nav>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <span class="status reveal"><span class="status__dot"></span>Disponível para novas oportunidades</span>
+
+          <p class="hero__hello mono reveal">Olá, mundo! Eu sou</p>
+          <h1 class="hero__name reveal">Elder Luiz<br><span class="gradient-text">Moreira</span></h1>
+
+          <p class="hero__role mono reveal">
+            <span class="hero__prompt">&gt;</span> <span id="typed">Desenvolvedor Fullstack</span><span class="caret" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero__desc reveal">
+            Construo do banco de dados ao pixel. Backend robusto com <strong>Java &amp; Spring Boot</strong>,
+            microsserviços na <strong>AWS</strong> e interfaces que convertem com <strong>React</strong> e JavaScript.
+            Sites que eu criei já estão no ar, trabalhando todos os dias para clientes reais.
+          </p>
+
+          <div class="hero__actions reveal">
+            <a href="#projetos" class="btn btn--primary">
+              Ver projetos
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a href="assets/docs/Elder-Luiz-Moreira-CV.pdf" class="btn btn--ghost" download>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11M7 10l5 5 5-5M5 20h14"/></svg>
+              Baixar currículo
+            </a>
+          </div>
+
+          <ul class="socials reveal" aria-label="Redes">
+            <li><a href="https://github.com/ElderLuiz" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></a></li>
+            <li><a href="https://www.linkedin.com/in/elder-luiz/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2ZM5.3 7.4a2.1 2.1 0 1 1 0-4.1 2.1 2.1 0 0 1 0 4.1Zm1.8 13.1H3.5V9h3.6v11.5ZM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0Z"/></svg></a></li>
+            <li><a href="https://wa.me/5561998578884" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.9-.6ZM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.2A11.8 11.8 0 0 0 1.8 17.8L.1 24l6.3-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.6Z"/></svg></a></li>
+            <li><a href="mailto:elderluizmoreira1@gmail.com" aria-label="E-mail"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg></a></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual reveal">
+          <div class="photo">
+            <div class="photo__ring" aria-hidden="true"></div>
+            <img src="assets/img/elder.jpg" alt="Foto de Elder Luiz Moreira" width="720" height="960">
+          </div>
+
+          <div class="code-card float-a" aria-hidden="true">
+            <div class="code-card__bar"><i></i><i></i><i></i><span>ElderLuiz.java</span></div>
+<pre><code><span class="k">@RestController</span>
+<span class="k">public class</span> <span class="t">ElderLuiz</span> {
+  <span class="k">@GetMapping</span>(<span class="s">"/missao"</span>)
+  <span class="t">String</span> <span class="f">missao</span>() {
+    <span class="k">return</span> <span class="s">"Resolver dores
+     com código."</span>;
+  }
+}</code></pre>
+          </div>
+
+          <div class="chip float-b" aria-hidden="true"><i class="devicon-spring-original colored"></i> Spring Boot</div>
+          <div class="chip chip--alt float-c" aria-hidden="true"><i class="devicon-react-original colored"></i> React</div>
+          <div class="chip float-d" aria-hidden="true"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</div>
+        </div>
+      </div>
+
+      <a href="#sobre" class="scroll-hint" aria-label="Rolar para a próxima seção"><span></span></a>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="Números">
+      <div class="container stats__grid">
+        <div class="stat reveal"><strong data-count="5">0</strong><span>sites no ar para clientes reais</span></div>
+        <div class="stat reveal"><strong data-count="20" data-suffix="+">0</strong><span>repositórios no GitHub</span></div>
+        <div class="stat reveal"><strong data-count="10" data-suffix="+">0</strong><span>cursos e certificações técnicas</span></div>
+        <div class="stat reveal"><strong data-count="3" data-suffix="+">0</strong><span>anos atuando com tecnologia</span></div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section" id="sobre">
+      <div class="container about">
+        <div class="section__head reveal">
+          <span class="eyebrow mono">01 · sobre mim</span>
+          <h2>Backend no DNA,<br><span class="gradient-text">fullstack</span> por escolha.</h2>
+        </div>
+
+        <div class="about__body">
+          <div class="about__text reveal">
+            <p>
+              Sou estudante de <strong>Sistemas de Informação no Instituto Federal de Goiás</strong> e
+              desenvolvedor desde que percebi que código é a forma mais rápida de transformar um problema em solução.
+              Comecei pelo backend: passei pela <strong>Compass UOL</strong> construindo APIs REST e microsserviços
+              com Java, Spring Boot, Spring Cloud, Docker e AWS.
+            </p>
+            <p>
+              Ao mesmo tempo, coloquei no ar sites para clínicas médicas, uma fazenda de turismo rural e uma empresa de
+              entretenimento. Isso me ensinou o outro lado: entender o negócio do cliente, criar uma interface que gera
+              contato e entregar algo que funciona no celular de qualquer pessoa.
+            </p>
+            <p>
+              Hoje meu objetivo é claro: ser um <strong>desenvolvedor fullstack</strong> que domina a ponta a ponta,
+              do banco ao deploy. Sou autodidata, disciplinado e tenho a ânsia diária de aprender algo novo.
+            </p>
+          </div>
+
+          <ul class="pillars">
+            <li class="pillar reveal">
+              <span class="pillar__icon">{ }</span>
+              <h3>APIs e microsserviços</h3>
+              <p>Java 17, Spring Boot, JPA, Spring Cloud, OpenFeign e mensageria.</p>
+            </li>
+            <li class="pillar reveal">
+              <span class="pillar__icon">&lt;/&gt;</span>
+              <h3>Interfaces que convertem</h3>
+              <p>Sites rápidos e responsivos, pensados para gerar contato pelo WhatsApp.</p>
+            </li>
+            <li class="pillar reveal">
+              <span class="pillar__icon">☁</span>
+              <h3>Cloud AWS</h3>
+              <p>EC2, S3, CloudFront, ECS, Lambda, SQS/SNS e API Gateway.</p>
+            </li>
+            <li class="pillar reveal">
+              <span class="pillar__icon">↗</span>
+              <h3>Visão de negócio</h3>
+              <p>Experiência com marketing digital, tráfego pago e Google Meu Negócio.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STACK ============ -->
+    <section class="section" id="stack">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow mono">02 · stack</span>
+          <h2>Ferramentas que eu uso<br>para <span class="gradient-text">entregar</span>.</h2>
+        </div>
+
+        <div class="stack">
+          <article class="stack__group reveal spotlight">
+            <h3><span class="mono">01</span> Backend</h3>
+            <ul class="tags">
+              <li><i class="devicon-java-plain colored"></i>Java</li>
+              <li><i class="devicon-spring-original colored"></i>Spring Boot</li>
+              <li>Spring Data JPA</li>
+              <li>Spring Security</li>
+              <li>Spring Cloud</li>
+              <li>APIs REST</li>
+              <li>Microsserviços</li>
+              <li><i class="devicon-nodejs-plain colored"></i>Node.js</li>
+              <li><i class="devicon-php-plain colored"></i>PHP</li>
+              <li><i class="devicon-laravel-original colored"></i>Laravel</li>
+            </ul>
+          </article>
+
+          <article class="stack__group reveal spotlight">
+            <h3><span class="mono">02</span> Frontend</h3>
+            <ul class="tags">
+              <li><i class="devicon-react-original colored"></i>React</li>
+              <li><i class="devicon-javascript-plain colored"></i>JavaScript</li>
+              <li><i class="devicon-html5-plain colored"></i>HTML5</li>
+              <li><i class="devicon-css3-plain colored"></i>CSS3</li>
+              <li><i class="devicon-wordpress-plain"></i>WordPress</li>
+              <li>Elementor</li>
+              <li><i class="devicon-figma-plain colored"></i>Figma</li>
+            </ul>
+          </article>
+
+          <article class="stack__group reveal spotlight">
+            <h3><span class="mono">03</span> Dados</h3>
+            <ul class="tags">
+              <li><i class="devicon-mysql-original colored"></i>MySQL</li>
+              <li><i class="devicon-microsoftsqlserver-plain colored"></i>SQL Server</li>
+              <li><i class="devicon-postgresql-plain colored"></i>PostgreSQL</li>
+              <li><i class="devicon-mongodb-plain colored"></i>MongoDB</li>
+              <li>JDBC</li>
+              <li>H2</li>
+            </ul>
+          </article>
+
+          <article class="stack__group reveal spotlight">
+            <h3><span class="mono">04</span> Cloud &amp; DevOps</h3>
+            <ul class="tags">
+              <li><i class="devicon-amazonwebservices-plain-wordmark colored"></i>AWS</li>
+              <li>EC2 · ECS · ECR</li>
+              <li>S3 · CloudFront</li>
+              <li>Lambda · API Gateway</li>
+              <li>SQS · SNS</li>
+              <li>RDS · IAM · CloudWatch</li>
+              <li><i class="devicon-docker-plain colored"></i>Docker</li>
+              <li><i class="devicon-git-plain colored"></i>Git</li>
+              <li><i class="devicon-github-original"></i>GitHub</li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee__track">
+            <span>Java</span><span>Spring Boot</span><span>React</span><span>AWS</span><span>Docker</span><span>MongoDB</span><span>MySQL</span><span>REST</span><span>Microsserviços</span><span>Scrum</span><span>Git</span><span>JavaScript</span>
+            <span>Java</span><span>Spring Boot</span><span>React</span><span>AWS</span><span>Docker</span><span>MongoDB</span><span>MySQL</span><span>REST</span><span>Microsserviços</span><span>Scrum</span><span>Git</span><span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIÊNCIA ============ -->
+    <section class="section" id="experiencia">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow mono">03 · experiência</span>
+          <h2>Onde eu já<br><span class="gradient-text">gerei valor</span>.</h2>
+        </div>
+
+        <ol class="timeline">
+          <li class="job reveal">
+            <div class="job__meta mono"><span class="job__date">Atual</span><span>Remoto · Luziânia, GO</span></div>
+            <div class="job__card spotlight">
+              <h3>Desenvolvedor Web Freelancer</h3>
+              <p class="job__company">Dev Elder · projetos sob demanda</p>
+              <p>
+                Desenvolvimento de sites institucionais e landing pages para negócios locais e nacionais, da
+                conversa com o cliente ao deploy. Foco em performance, responsividade e conversão via WhatsApp.
+                Clientes incluem Nossa Clínica, Multiclínicas Luziânia, Robô Trance e Fazenda Boa Sorte.
+              </p>
+              <ul class="tags tags--sm"><li>HTML/CSS/JS</li><li>WordPress</li><li>Elementor</li><li>Vercel</li><li>SEO</li></ul>
+            </div>
+          </li>
+
+          <li class="job reveal">
+            <div class="job__meta mono"><span class="job__date">Dez 2024 – Jul 2025</span><span>Compass UOL</span></div>
+            <div class="job__card spotlight">
+              <h3>Desenvolvedor Java · Estágio</h3>
+              <p class="job__company">Compass UOL</p>
+              <p>
+                Desenvolvimento backend com Java e Spring Boot em arquitetura de microsserviços, com mensageria via
+                Spring Cloud e Docker. Computação em nuvem na AWS (EC2, S3, CloudFront, Snowball), bancos SQL e NoSQL,
+                integração de APIs REST, versionamento com Git e rotina ágil com Scrum.
+              </p>
+              <ul class="tags tags--sm"><li>Java</li><li>Spring Boot</li><li>Spring Cloud</li><li>Docker</li><li>AWS</li><li>MongoDB</li><li>Scrum</li></ul>
+            </div>
+          </li>
+
+          <li class="job reveal">
+            <div class="job__meta mono"><span class="job__date">Ago 2023 – Mai 2024</span><span>Jaboticabal, SP</span></div>
+            <div class="job__card spotlight">
+              <h3>Desenvolvedor Web</h3>
+              <p class="job__company">TRP Cardiologia e Imagem</p>
+              <p>
+                Desenvolvi do zero o site institucional da clínica com WordPress e PHP, responsivo e alinhado à
+                identidade da marca. Também atuei como social media e gestor de marketing digital: campanhas, tráfego
+                pago, Google Meu Negócio e peças gráficas.
+              </p>
+              <ul class="tags tags--sm"><li>WordPress</li><li>PHP</li><li>Tráfego pago</li><li>Design</li></ul>
+            </div>
+          </li>
+
+          <li class="job reveal">
+            <div class="job__meta mono"><span class="job__date">Mai 2023 – Ago 2023</span><span>Luziânia, GO</span></div>
+            <div class="job__card spotlight">
+              <h3>Técnico em Informática</h3>
+              <p class="job__company">ZM Plastic Embalagens</p>
+              <p>
+                Organização e atualização dos dados no ERP da empresa (clientes, fornecedores, produtos, ordens de compra
+                e relatórios gerenciais), dando suporte aos setores administrativo e operacional.
+              </p>
+            </div>
+          </li>
+
+          <li class="job reveal">
+            <div class="job__meta mono"><span class="job__date">Out 2022 – Mar 2023</span><span>Luziânia, GO</span></div>
+            <div class="job__card spotlight">
+              <h3>Estágio · Técnico em Informática</h3>
+              <p class="job__company">Complexo de Especialidades Médicas Metropolitano</p>
+              <p>
+                Suporte no treinamento do sistema interno, implantação e gerenciamento de redes e manutenção dos
+                equipamentos, garantindo a operação do ambiente tecnológico.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ PROJETOS ============ -->
+    <section class="section" id="projetos">
+      <div class="container">
+        <div class="section__head section__head--row reveal">
+          <div>
+            <span class="eyebrow mono">04 · projetos</span>
+            <h2>Coisas que eu<br><span class="gradient-text">coloquei no ar</span>.</h2>
+          </div>
+          <div class="filters" role="tablist" aria-label="Filtrar projetos">
+            <button class="filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+            <button class="filter" data-filter="web" role="tab" aria-selected="false">Sites em produção</button>
+            <button class="filter" data-filter="backend" role="tab" aria-selected="false">Backend &amp; APIs</button>
+            <button class="filter" data-filter="java" role="tab" aria-selected="false">Java &amp; Games</button>
+          </div>
+        </div>
+
+        <!-- Sites em produção -->
+        <div class="projects">
+          <article class="project project--feature reveal" data-cat="web">
+            <a class="project__shot" href="https://fazenda-boa-sorte-zeta.vercel.app" target="_blank" rel="noopener">
+              <img src="assets/img/projects/fazenda.jpg" alt="Site da Fazenda Boa Sorte" loading="lazy" width="1200" height="750">
+              <span class="project__live mono">● no ar</span>
+            </a>
+            <div class="project__body">
+              <span class="project__kind mono">Site · Turismo rural</span>
+              <h3>Fazenda Boa Sorte</h3>
+              <p>
+                Site completo para uma fazenda de turismo rural em Luziânia: hospedagem, day use, eventos, avaliações,
+                FAQ e rotas. Carrossel de acomodações com swipe, vídeo, imagens WebP e reservas direto no WhatsApp.
+              </p>
+              <ul class="tags tags--sm"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>Vercel</li></ul>
+              <div class="project__links">
+                <a href="https://fazenda-boa-sorte-zeta.vercel.app" target="_blank" rel="noopener">Ver site ↗</a>
+                <a href="https://github.com/ElderLuiz/fazenda-boa-sorte" target="_blank" rel="noopener">Código ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="web">
+            <a class="project__shot" href="https://robotrance.com/" target="_blank" rel="noopener">
+              <img src="assets/img/projects/robotrance.jpg" alt="Site da Robô Trance" loading="lazy" width="1200" height="750">
+              <span class="project__live mono">● no ar</span>
+            </a>
+            <div class="project__body">
+              <span class="project__kind mono">Site · Entretenimento</span>
+              <h3>Robô Trance</h3>
+              <p>Site para empresa de robôs de LED e efeitos especiais para eventos em todo o Brasil, com galeria, serviços e orçamento via WhatsApp.</p>
+              <ul class="tags tags--sm"><li>WordPress</li><li>Elementor</li><li>SEO</li></ul>
+              <div class="project__links"><a href="https://robotrance.com/" target="_blank" rel="noopener">Ver site ↗</a></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="web">
+            <a class="project__shot" href="https://nossaclinicaluziania.com.br/" target="_blank" rel="noopener">
+              <img src="assets/img/projects/nossaclinica.jpg" alt="Site da Nossa Clínica Luziânia" loading="lazy" width="1200" height="750">
+              <span class="project__live mono">● no ar</span>
+            </a>
+            <div class="project__body">
+              <span class="project__kind mono">Site · Saúde</span>
+              <h3>Nossa Clínica Luziânia</h3>
+              <p>Centro médico e de diagnósticos: especialidades, cartão de desconto, tabela de serviços, mapa e formulários de agendamento online.</p>
+              <ul class="tags tags--sm"><li>WordPress</li><li>Elementor</li><li>Formulários</li></ul>
+              <div class="project__links"><a href="https://nossaclinicaluziania.com.br/" target="_blank" rel="noopener">Ver site ↗</a></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="web">
+            <a class="project__shot" href="https://multiclinicasluziania.com/" target="_blank" rel="noopener">
+              <img src="assets/img/projects/multiclinicas.jpg" alt="Site da Multiclínicas Luziânia" loading="lazy" width="1200" height="750">
+              <span class="project__live mono">● no ar</span>
+            </a>
+            <div class="project__body">
+              <span class="project__kind mono">Site · Saúde</span>
+              <h3>Multiclínicas Luziânia</h3>
+              <p>Clínica com mais de 10 especialidades: agendamento pelo WhatsApp, acesso a resultados de exames, convênios, avaliações do Google e blog.</p>
+              <ul class="tags tags--sm"><li>WordPress</li><li>Elementor</li><li>Blog</li></ul>
+              <div class="project__links"><a href="https://multiclinicasluziania.com/" target="_blank" rel="noopener">Ver site ↗</a></div>
+            </div>
+          </article>
+
+          <article class="project reveal" data-cat="web">
+            <div class="project__shot">
+              <img src="assets/img/projects/trp.jpg" alt="Identidade visual da TRP Cardiologia e Imagem" loading="lazy" width="1200" height="750">
+              <span class="project__live project__live--off mono">○ arquivado</span>
+            </div>
+            <div class="project__body">
+              <span class="project__kind mono">Site · Saúde</span>
+              <h3>TRP Cardiologia e Imagem</h3>
+              <p>Site institucional construído do zero com WordPress e PHP, somado a toda a estratégia digital da clínica: redes sociais, tráfego pago e peças gráficas.</p>
+              <ul class="tags tags--sm"><li>WordPress</li><li>PHP</li><li>Marketing</li></ul>
+            </div>
+          </article>
+        </div>
+
+        <!-- Repositórios -->
+        <h3 class="subhead reveal mono" data-sub="code">// direto do meu GitHub</h3>
+        <div class="repos">
+          <article class="repo reveal spotlight" data-cat="backend">
+            <header><span class="repo__icon">{ }</span><span class="repo__lang"><i style="--c:#e76f00"></i>Java</span></header>
+            <h3>Microsserviços de Eventos e Ingressos</h3>
+            <p>Desafio da Compass UOL: dois microsserviços (<em>event-manager</em> e <em>ticket-manager</em>) para shows, teatro e exposições, com integração de CEP via OpenFeign e documentação Swagger.</p>
+            <ul class="tags tags--sm"><li>Spring Boot</li><li>Spring Cloud</li><li>OpenFeign</li><li>MongoDB</li><li>Swagger</li></ul>
+            <a class="repo__link" href="https://github.com/ElderLuiz/CompassDesafio3" target="_blank" rel="noopener">CompassDesafio3 ↗</a>
+          </article>
+
+          <article class="repo reveal spotlight" data-cat="backend">
+            <header><span class="repo__icon">{ }</span><span class="repo__lang"><i style="--c:#61dafb"></i>Fullstack</span></header>
+            <h3>Cardápio Digital</h3>
+            <p>Aplicação fullstack de cardápio: API REST em Spring Boot com DTOs de request/response e frontend em React consumindo os endpoints.</p>
+            <ul class="tags tags--sm"><li>Spring Boot</li><li>JPA</li><li>React</li></ul>
+            <a class="repo__link" href="https://github.com/ElderLuiz/Cardapio" target="_blank" rel="noopener">Cardapio ↗</a>
+          </article>
+
+          <article class="repo reveal spotlight" data-cat="backend">
+            <header><span class="repo__icon">{ }</span><span class="repo__lang"><i style="--c:#e76f00"></i>Java</span></header>
+            <h3>GamesForLife · DSList</h3>
+            <p>API REST de listas de games com entidades, DTOs, projections e consultas customizadas. Perfis de teste com H2 e produção com PostgreSQL.</p>
+            <ul class="tags tags--sm"><li>Spring Boot</li><li>JPA</li><li>PostgreSQL</li><li>H2</li></ul>
+            <a class="repo__link" href="https://github.com/ElderLuiz/GamesForLife" target="_blank" rel="noopener">GamesForLife ↗</a>
+          </article>
+
+          <article class="repo reveal spotlight" data-cat="backend">
+            <header><span class="repo__icon">{ }</span><span class="repo__lang"><i style="--c:#e76f00"></i>Java</span></header>
+            <h3>Shopping Cart</h3>
+            <p>Carrinho de compras em Java 17 com JDBC e MySQL seguindo padrão MVC: estoque, carrinho e cálculo de totais direto no banco.</p>
+            <ul class="tags tags--sm"><li>Java 17</li><li>JDBC</li><li>MySQL</li><li>MVC</li></ul>
+            <a class="repo__link" href="https://github.com/ElderLuiz/ShoppingCart" target="_blank" rel="noopener">ShoppingCart ↗</a>
+          </article>
+
+          <article class="repo reveal spotlight" data-cat="backend">
+            <header><span class="repo__icon">{ }</span><span class="repo__lang"><i style="--c:#ff2d20"></i>PHP</span></header>
+            <h3>Notes Project</h3>
+            <p>Aplicação de notas construída com Laravel e Blade, explorando rotas, controllers, views e o ORM Eloquent no ecossistema PHP.</p>
+            <ul class="tags tags--sm"><li>Laravel</li><li>PHP</li><li>Blade</li></ul>
+            <a class="repo__link" href="https://github.com/ElderLuiz/NotesProject" target="_blank" rel="noopener">NotesProject ↗</a>
+          </article>
+
+          <article class="repo reveal spotlight" data-cat="java">
+            <header><span class="repo__icon">▶</span><span class="repo__lang"><i style="--c:#e76f00"></i>Java</span></header>
+            <h3>Chess System</h3>
+            <p>Xadrez no terminal construído com orientação a objetos: tabuleiro, regras de movimento de cada peça, controle da partida e tratamento de exceções.</p>
+            <ul class="tags tags--sm"><li>Java</li><li>POO</li></ul>
+            <a class="repo__link" href="https://github.com/ElderLuiz/ChessSystem" target="_blank" rel="noopener">ChessSystem ↗</a>
+          </article>
+
+          <article class="repo reveal spotlight" data-cat="java">
+            <header><span class="repo__icon">▶</span><span class="repo__lang"><i style="--c:#e76f00"></i>Java</span></header>
+            <h3>Flappy Bird IFG</h3>
+            <p>Releitura do Flappy Bird criada na disciplina de Desenvolvimento de Jogos do IFG, projeto que virou <a href="https://www.ifg.edu.br/ultimas-noticias-campus-luziania/36549-estudantes-do-curso-de-sistemas-de-informacao-desenvolvem-jogos-digitais" target="_blank" rel="noopener">notícia no site do instituto</a>.</p>
+            <ul class="tags tags--sm"><li>Java</li><li>Game Dev</li></ul>
+            <a class="repo__link" href="https://github.com/ElderLuiz/FlappyBirdIFG" target="_blank" rel="noopener">FlappyBirdIFG ↗</a>
+          </article>
+
+          <article class="repo reveal spotlight" data-cat="java">
+            <header><span class="repo__icon">▶</span><span class="repo__lang"><i style="--c:#e76f00"></i>Java</span></header>
+            <h3>Jogo da Memória</h3>
+            <p>Jogo da memória com interface gráfica em JavaFX, manipulação de eventos e lógica de estado da partida.</p>
+            <ul class="tags tags--sm"><li>Java</li><li>JavaFX</li></ul>
+            <a class="repo__link" href="https://github.com/ElderLuiz/JogoDaMemoriaJavaFx" target="_blank" rel="noopener">JogoDaMemoriaJavaFx ↗</a>
+          </article>
+        </div>
+
+        <div class="center reveal">
+          <a href="https://github.com/ElderLuiz?tab=repositories" class="btn btn--ghost" target="_blank" rel="noopener">Ver todos os repositórios ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FORMAÇÃO ============ -->
+    <section class="section" id="formacao">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="eyebrow mono">05 · formação</span>
+          <h2>Estudo todo dia.<br><span class="gradient-text">Sem exceção</span>.</h2>
+        </div>
+
+        <div class="edu">
+          <article class="edu__main reveal spotlight">
+            <span class="edu__badge mono">Graduação</span>
+            <h3>Bacharelado em Sistemas de Informação</h3>
+            <p class="edu__school">Instituto Federal de Goiás · Campus Luziânia</p>
+            <p class="mono edu__period">2021 – 2026</p>
+            <div class="edu__langs">
+              <div><span class="mono">Idioma</span><strong>Inglês avançado</strong></div>
+              <div><span class="mono">Modelo</span><strong>Remoto, híbrido ou presencial</strong></div>
+            </div>
+          </article>
+
+          <ul class="certs">
+            <li class="cert reveal"><span class="cert__org mono">Santander</span><strong>Backend com Java</strong><span class="cert__h mono">87h</span></li>
+            <li class="cert reveal"><span class="cert__org mono">Udemy</span><strong>Java Completo · Programação Orientada a Objetos</strong><span class="cert__h mono">55h</span></li>
+            <li class="cert reveal"><span class="cert__org mono">Udemy</span><strong>Microsserviços e Mensageria com Spring Cloud e Docker</strong><span class="cert__h mono">17h</span></li>
+            <li class="cert reveal"><span class="cert__org mono">Udemy</span><strong>API REST com Java e Spring Boot</strong><span class="cert__h mono">16h</span></li>
+            <li class="cert reveal"><span class="cert__org mono">Rocketseat</span><strong>Programação Web: HTML, CSS, JavaScript e Git</strong><span class="cert__h mono">12h</span></li>
+            <li class="cert reveal"><span class="cert__org mono">Udemy</span><strong>SQL e MySQL · CRUD e Joins</strong><span class="cert__h mono">10h</span></li>
+            <li class="cert reveal"><span class="cert__org mono">Udemy</span><strong>Amazon S3, CloudFront CDN e Snowball</strong><span class="cert__h mono">5h</span></li>
+            <li class="cert reveal"><span class="cert__org mono">Udemy</span><strong>Servidores Virtuais com EC2 na AWS</strong><span class="cert__h mono">5h</span></li>
+            <li class="cert reveal"><span class="cert__org mono">DIO</span><strong>Versionamento de Código com Git e GitHub</strong><span class="cert__h mono">5h</span></li>
+            <li class="cert reveal"><span class="cert__org mono">Udemy</span><strong>Computação em Nuvem Amazon AWS</strong><span class="cert__h mono">4h</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section contact" id="contato">
+      <div class="container">
+        <div class="contact__box reveal">
+          <div class="contact__intro">
+            <span class="eyebrow mono">06 · contato</span>
+            <h2>Vamos construir<br>algo <span class="gradient-text">juntos</span>?</h2>
+            <p>Tem uma vaga, um projeto ou uma ideia? Me chama. Respondo rápido e adoro uma boa conversa sobre código e produto.</p>
+
+            <ul class="contact__list">
+              <li>
+                <a href="mailto:elderluizmoreira1@gmail.com">
+                  <span class="contact__ico"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" d="M3 6h18v12H3zM3 7l9 6 9-6"/></svg></span>
+                  <span><small class="mono">e-mail</small>elderluizmoreira1@gmail.com</span>
+                </a>
+                <button class="copy" data-copy="elderluizmoreira1@gmail.com" aria-label="Copiar e-mail">copiar</button>
+              </li>
+              <li>
+                <a href="https://wa.me/5561998578884" target="_blank" rel="noopener">
+                  <span class="contact__ico"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1a8 8 0 0 1-4-3.5c-.3-.5.3-.5.9-1.6.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.5 13.5 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4l-.9-.6ZM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.2A11.8 11.8 0 0 0 1.8 17.8L.1 24l6.3-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.6Z"/></svg></span>
+                  <span><small class="mono">whatsapp</small>(61) 99857-8884</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/elder-luiz/" target="_blank" rel="noopener">
+                  <span class="contact__ico"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2ZM5.3 7.4a2.1 2.1 0 1 1 0-4.1 2.1 2.1 0 0 1 0 4.1Zm1.8 13.1H3.5V9h3.6v11.5ZM22.2 0H1.8C.8 0 0 .8 0 1.7v20.6c0 .9.8 1.7 1.8 1.7h20.4c1 0 1.8-.8 1.8-1.7V1.7C24 .8 23.2 0 22.2 0Z"/></svg></span>
+                  <span><small class="mono">linkedin</small>in/elder-luiz</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/ElderLuiz" target="_blank" rel="noopener">
+                  <span class="contact__ico"><svg viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.3 1.2a11.5 11.5 0 0 1 6 0C17.3 4.7 18.3 5 18.3 5c.7 1.6.2 2.9.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z"/></svg></span>
+                  <span><small class="mono">github</small>@ElderLuiz</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="contact__form" id="contactForm" novalidate>
+            <div class="terminal__bar"><i></i><i></i><i></i><span class="mono">nova-mensagem.sh</span></div>
+            <label>
+              <span class="mono">$ nome</span>
+              <input type="text" name="nome" required placeholder="Seu nome" autocomplete="name">
+            </label>
+            <label>
+              <span class="mono">$ empresa <em>(opcional)</em></span>
+              <input type="text" name="empresa" placeholder="Onde você trabalha" autocomplete="organization">
+            </label>
+            <label>
+              <span class="mono">$ mensagem</span>
+              <textarea name="mensagem" rows="5" required placeholder="Conte sobre a vaga ou o projeto..."></textarea>
+            </label>
+            <p class="form__error mono" id="formError" role="alert"></p>
+            <div class="form__actions">
+              <button type="submit" class="btn btn--primary" data-via="whatsapp">Enviar no WhatsApp</button>
+              <button type="submit" class="btn btn--ghost" data-via="email">Enviar por e-mail</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#inicio" class="logo"><span class="logo__bracket">&lt;</span>elder<span class="logo__accent">.dev</span><span class="logo__bracket">/&gt;</span></a>
+      <p class="mono">© <span id="year">2026</span> Elder Luiz Moreira · feito com café, Java e muito CSS.</p>
+      <a href="#inicio" class="to-top" aria-label="Voltar ao topo">↑</a>
+    </div>
+  </footer>
+
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+</body>
+</html>
