@@ -524,3 +524,10 @@ button { font: inherit; color: inherit; cursor: pointer; }
 .tags .devicon-java-plain, .tags .devicon-mysql-original, .tags .devicon-microsoftsqlserver-plain,
 .tags .devicon-postgresql-plain, .tags .devicon-laravel-original, .tags .devicon-php-plain { filter: brightness(1.7) saturate(1.1); }
 .repo__icon { font-family: var(--font-mono); font-size: 13px; }
+
+/* card que sobra sozinho na última linha ocupa a largura toda, na horizontal */
+@media (min-width: 961px) {
+  .projects > .project:not(.project--feature):last-child:nth-child(even) { grid-column: 1 / -1; flex-direction: row; }
+  .projects > .project:not(.project--feature):last-child:nth-child(even) .project__shot { flex: 1.35; aspect-ratio: auto; min-height: 320px; border-bottom: 0; border-right: 1px solid var(--line); }
+  .projects > .project:not(.project--feature):last-child:nth-child(even) .project__body { flex: 1; padding: 36px; justify-content: center; }
+}
